@@ -1,4 +1,6 @@
-package bicleteando;
+package logica;
+
+import bicleteando.Bicicleta;
 
 public class Usuario {
 
