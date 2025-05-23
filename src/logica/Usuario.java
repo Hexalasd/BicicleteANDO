@@ -1,13 +1,12 @@
 package logica;
 
-import bicleteando.Bicicleta;
-
 public class Usuario {
 
     private String nombre;
     private int edad;
     private Bicicleta bici;
     private boolean cascoPuesto;
+    private Bicicleta bicicleta;
 
     public Usuario(String nombre, int edad, Bicicleta bici) {
         this.nombre = nombre;
@@ -25,11 +24,18 @@ public class Usuario {
     }
 
     public void hacerViaje(double km, double tiempoHoras) {
+        if(cascoPuesto){
+            bicicleta.registrarViaje(double km, double tiempoHoras);
+        }
+        else{
+            System.out.println("No se puede realizar el viaje: el casco no esta puesto");
+        }
         // COMPLETAR:
-        // 1. Verificar si el casco está puesto
-        //    Si no está, mostrar mensaje y no permitir el viaje
+        // 1. Verificar si el casco está puesto 
+        //    Si no está, mostrar mensaje y no permitir el viaje ESTA
+        
         // 2. Si está puesto, registrar el viaje en la bicicleta
-        //    usando el método registrarViaje()
+        //    usando el método registrarViaje() 
 
         // Pista:
         // - usar bici.registrarViaje(km, tiempoHoras);
