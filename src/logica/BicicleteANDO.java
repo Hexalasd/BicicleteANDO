@@ -1,7 +1,5 @@
 package logica;
 
-import bicleteando.Bicicleta;
-
 public class BicicleteANDO {
 
     public static void main(String[] args) {
