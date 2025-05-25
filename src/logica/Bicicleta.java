@@ -32,7 +32,7 @@ public class Bicicleta {
         this.distanciaRecorrida += km;
         this.nuevaVelocidad = km/tiempoHoras;
         this.velocidadPromedio = velocidadPromedio+nuevaVelocidad/2;
-        this.presionNeumaticos =- km/5 * 0.5;
+        this.presionNeumaticos -= km/5 * 0.5;
         
         // 1. Sumar los km al total de distanciaRecorrida ESTA
         // 2. Calcular velocidad del viaje actual: km / tiempoHoras ESTA
@@ -41,7 +41,7 @@ public class Bicicleta {
     }
     
     public boolean tocaPrimerService() {
-        if(modelo == "electrica" && distanciaRecorrida > 500){
+        if("electrica".equals(modelo) && distanciaRecorrida > 500){
             return true;
         }
         else{
@@ -77,7 +77,7 @@ public class Bicicleta {
     }
     
     public void setPresionNeumaticos(double presionNeumaticos) {
-        if (presionNeumaticos <= 70  && presionNeumaticos >= 1){
+        if (presionNeumaticos <= 70  && presionNeumaticos >= 0){
             this.presionNeumaticos = presionNeumaticos;
         }
         
