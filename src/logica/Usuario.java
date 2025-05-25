@@ -6,7 +6,6 @@ public class Usuario {
     private int edad;
     private Bicicleta bici;
     private boolean cascoPuesto;
-    private Bicicleta bicicleta;
 
     public Usuario(String nombre, int edad, Bicicleta bici) {
         this.nombre = nombre;
@@ -24,42 +23,47 @@ public class Usuario {
     }
 
    public void hacerViaje(double km, double tiempoHoras) {
+         // 1. Verificar si el casco está puesto 
+        //    Si no está, mostrar mensaje y no permitir el viaje ESTA
+        // 2. Si está puesto, registrar el viaje en la bicicleta
+        //    usando el método registrarViaje() 
     if (cascoPuesto) {
         bici.registrarViaje(km, tiempoHoras);
     } else {
         System.out.println("No se puede realizar el viaje: el casco no esta puesto");
     }
-
-        // COMPLETAR:
-        // 1. Verificar si el casco está puesto 
-        //    Si no está, mostrar mensaje y no permitir el viaje ESTA
-        
-        // 2. Si está puesto, registrar el viaje en la bicicleta
-        //    usando el método registrarViaje() 
-
-        // Pista:
-        // - usar bici.registrarViaje(km, tiempoHoras);
-        // - usar isCascoPuesto() para verificar si el casco está puesto
     }
-
+ // 1. Verificar si la bicicleta necesita inflado
     public String revisarBicicleta() {
-        // COMPLETAR:
-        // 1. Verificar si la bicicleta necesita inflado
-
+        String mensaje ="";
+        if(bici.necesitaInflado()){
+            mensaje += "inflar!!";
+           
+        }
         // 2. Verificar si la bicicleta necesita service
-        // Pista:
-        // - Usar bici.necesitaCarga(), bici.necesitaInflado(), etc.
+        if(bici.tocaPrimerService()){
+            mensaje += "nececita servicio";
+        }
         return "";
         
     }
 
     @Override
     public String toString() {
-        // COMPLETAR:
         // Mostrar resumen de bici y advertencias si necesita inflado o carga
-        // Ejemplo:
-        // "Juan (17): EcoRider (eléctrica) - 30 km - PSI: 18.0 - Inflar! Necesita service!"
-        return "";
+        String estado =nombre + " (" + edad + "): " + bici.getModelo() + " (" + bici.getModo() + ") - " +
+                        bici.getDistanciaRecorrida() + " km - PSI: " + bici.getPresionNeumaticos();
+        String advertencia =revisarBicicleta();
+        if(bici.necesitaInflado()){
+            advertencia = "inflar!!";
+        }
+       
+        //logica para que no se duplique el mensaje de advertencia usando ya el metodo de revisarBicicleta
+        if(!advertencia.isEmpty()){
+            estado = advertencia ;
+        }
+            return estado + advertencia;
+        
     }
 
     public boolean isCascoPuesto() {
