@@ -23,13 +23,13 @@ public class Usuario {
         cascoPuesto = false;
     }
 
-    public void hacerViaje(double km, double tiempoHoras) {
-        if(cascoPuesto){
-            bicicleta.registrarViaje(double km, double tiempoHoras);
-        }
-        else{
-            System.out.println("No se puede realizar el viaje: el casco no esta puesto");
-        }
+   public void hacerViaje(double km, double tiempoHoras) {
+    if (cascoPuesto) {
+        bici.registrarViaje(km, tiempoHoras);
+    } else {
+        System.out.println("No se puede realizar el viaje: el casco no esta puesto");
+    }
+
         // COMPLETAR:
         // 1. Verificar si el casco está puesto 
         //    Si no está, mostrar mensaje y no permitir el viaje ESTA
