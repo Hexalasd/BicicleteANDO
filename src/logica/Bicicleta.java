@@ -41,6 +41,8 @@ public class Bicicleta {
     }
     
     public boolean tocaPrimerService() {
+        // Si es eléctrica y recorrió más de 500 km, necesita service.  ESTA
+        //Las bicicletas comunes necesitan service a los 300km. ESTA
         if("electrica".equals(modelo) && distanciaRecorrida > 500){
             return true;
         }
@@ -51,12 +53,7 @@ public class Bicicleta {
             else{
                 return false;
             }
-            
-            
         }
-        // COMPLETAR:
-        // Si es eléctrica y recorrió más de 500 km, necesita service.  ESTA
-        //Las bicicletas comunes necesitan service a los 300km. ESTA
     }
     
     public boolean necesitaInflado() {
@@ -81,17 +78,17 @@ public class Bicicleta {
             this.presionNeumaticos = presionNeumaticos;
         }
         
-        // COMPLETAR:
+       
         // Solo aceptar entre 0 y 70  ESTA
         // Si es válido, cambiar presionNeumaticos ESTA
     }
 
     @Override
     public String toString() {
-        return "Bicicleta{" + "modelo=" + modelo + ", modo=" + modo + ", distanciaRecorrida=" + distanciaRecorrida + 
-                ", velocidadPromedio=" + velocidadPromedio + ", cambiosActuales=" + cambiosActuales + 
-                ", presionNeumaticos=" + presionNeumaticos + ", nuevaVelocidad=" + nuevaVelocidad + '}';
-        // COMPLETAR: retornar descripción como:
+        return "Bicicleta{" + "modelo=" + modelo + " (" + modo+ ") " + " -" + distanciaRecorrida+ " km -" + 
+                " Vel. Prom.:" + velocidadPromedio +"km/h" + " - cambios: " + cambiosActuales + 
+                " Psi: 22.5=" + presionNeumaticos + ", nuevaVelocidad=" + nuevaVelocidad + '}';
+         //retornar descripción como:
         // "EcoRider (eléctrica) - 22.0 km - Vel. Prom.: 23.1 km/h - Cambios: 4 - PSI: 22.5"
         
     }

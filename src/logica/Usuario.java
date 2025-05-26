@@ -38,7 +38,7 @@ public class Usuario {
         String mensaje ="";
         if(bici.necesitaInflado()){
             mensaje += "inflar!!";
-           
+            
         }
         // 2. Verificar si la bicicleta necesita service
         if(bici.tocaPrimerService()){
@@ -57,12 +57,12 @@ public class Usuario {
         if(bici.necesitaInflado()){
             advertencia = "inflar!!";
         }
-       
+      
         //logica para que no se duplique el mensaje de advertencia usando ya el metodo de revisarBicicleta
         if(!advertencia.isEmpty()){
             estado = advertencia ;
         }
-            return estado + advertencia;
+            return estado; 
         
     }
 
