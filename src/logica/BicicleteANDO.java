@@ -1,8 +1,66 @@
 package logica;
 
+import java.util.Scanner;
+
+import java.util.ArrayList;
+
 public class BicicleteANDO {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        int cantUsuarios;
+        int edadUsuarios;
+        String nombreUsuarios;
+        ArrayList<Bicicleta> bicicletas = new ArrayList<>();
+        int cantBicis;
+        String modeloBicis;
+        String modoBicis;
+        int numIndiceBici;
+        
+        //sirve para ingresar bicis
+        System.out.print("Ingrese la cantidad de bicicletas que quiere crear: ");
+        cantBicis = scanner.nextInt();
+        
+        for (int i = 0; i < cantBicis; i++){
+            System.out.println("Bicicleta n. "+(i+1)+":");
+            System.out.print("Ingrese modelo: ");
+            modeloBicis = scanner.next();
+            System.out.print("Ingrese modo: ");
+            modoBicis = scanner.next();
+            
+            bicicletas.add(new Bicicleta(modeloBicis, modoBicis));
+            System.out.print("\n");
+        }
+        
+        System.out.println("\n"); //para que no quede pegado
+        
+        //sirve para ingresar usuarios
+        System.out.print("Ingrese la cantidad de usuarios que quiere crear: ");
+        cantUsuarios = scanner.nextInt();
+        
+        for (int i = 0; i < cantUsuarios; i++){
+            System.out.println("Usuario n. "+(i+1)+":");
+            System.out.print("Nombre del usuario:");
+            nombreUsuarios = scanner.next();
+            System.out.print("Edad del usuario:");
+            edadUsuarios = scanner.nextInt();
+            System.out.print("Numero de ingreso de la bicicleta: ");
+            numIndiceBici = scanner.nextInt();
+            
+            usuarios.add(new Usuario(nombreUsuarios, edadUsuarios, bicicletas.get(numIndiceBici-1)));
+            System.out.println("\n");
+        }
+        
+        System.out.println(usuarios.get(0).toString());
+        System.out.println(usuarios.get(1).toString());
+        System.out.println(usuarios.get(2).toString());
+        
+         }
+
+}
+        
+        /*
         // Crear una bicicleta eléctrica
         Bicicleta bici1 = new Bicicleta("EcoRider", "electrica");
 
@@ -49,6 +107,5 @@ public class BicicleteANDO {
         // Mostrar estado general
         System.out.println("Estado general:");
         System.out.println(usuario1);
-    }
-
-}
+ */
+   
