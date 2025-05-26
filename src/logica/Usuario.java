@@ -27,42 +27,31 @@ public class Usuario {
         //    Si no está, mostrar mensaje y no permitir el viaje ESTA
         // 2. Si está puesto, registrar el viaje en la bicicleta
         //    usando el método registrarViaje() 
-    if (cascoPuesto) {
-        bici.registrarViaje(km, tiempoHoras);
-    } else {
-        System.out.println("No se puede realizar el viaje: el casco no esta puesto");
-    }
+        if (cascoPuesto) {
+            bici.registrarViaje(km, tiempoHoras);
+        } else {
+            System.out.println("No se puede realizar el viaje: el casco no esta puesto");
+        }
     }
  // 1. Verificar si la bicicleta necesita inflado
     public String revisarBicicleta() {
         String mensaje ="";
         if(bici.necesitaInflado()){
-            mensaje += "inflar!!";
+            mensaje += "inflar!";
             
         }
         // 2. Verificar si la bicicleta necesita service
         if(bici.tocaPrimerService()){
-            mensaje += "nececita servicio";
+            mensaje += "nececita servicio!";
         }
-        return "";
+        return mensaje;
         
     }
 
     @Override
     public String toString() {
         // Mostrar resumen de bici y advertencias si necesita inflado o carga
-        String estado =nombre + " (" + edad + "): " + bici.getModelo() + " (" + bici.getModo() + ") - " +
-                        bici.getDistanciaRecorrida() + " km - PSI: " + bici.getPresionNeumaticos();
-        String advertencia =revisarBicicleta();
-        if(bici.necesitaInflado()){
-            advertencia = "inflar!!";
-        }
-      
-        //logica para que no se duplique el mensaje de advertencia usando ya el metodo de revisarBicicleta
-        if(!advertencia.isEmpty()){
-            estado = advertencia ;
-        }
-            return estado; 
+        return nombre + " (" + edad + "): " +  bici.toString()+ revisarBicicleta();
         
     }
 

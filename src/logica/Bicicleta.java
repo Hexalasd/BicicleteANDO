@@ -10,13 +10,13 @@ public class Bicicleta {
     private double nuevaVelocidad;
     
     public Bicicleta(String modelo, String modo) {
-        if ((modelo.equalsIgnoreCase("montaña") || modelo.equalsIgnoreCase("urbano") || modelo.equalsIgnoreCase("electrica"))){
-            this.modelo = modelo;
+        this.modelo = modo;
+        if ((modo.equalsIgnoreCase("montaña") || modo.equalsIgnoreCase("urbano") || modo.equalsIgnoreCase("electrica"))){
+            this.modo = modo;
         }
         else{
-            this.modelo = "urbano";
+            this.modo = "urbano";
         }
-        this.modo = modo;
         this.distanciaRecorrida = 0;
         this.velocidadPromedio = 0;
         this.cambiosActuales = 3;
@@ -29,9 +29,16 @@ public class Bicicleta {
     }
     
     public void registrarViaje(double km, double tiempoHoras) {
+        //para probar que ande, lo dejo por las dudas
+        /*System.out.println("km: " + km + " tiempoHoras: " + tiempoHoras);
+        this.nuevaVelocidad = km / tiempoHoras;
+        System.out.println("Nueva velocidad calculada: " + nuevaVelocidad);
+        */
+        
+        //el metodo
         this.distanciaRecorrida += km;
-        this.nuevaVelocidad = km/tiempoHoras;
-        this.velocidadPromedio = velocidadPromedio+nuevaVelocidad/2;
+        this.nuevaVelocidad = km/tiempoHoras; //no da bien el el primer viaje, perso dsp si
+        this.velocidadPromedio = (velocidadPromedio+nuevaVelocidad)/2;
         this.presionNeumaticos -= km/5 * 0.5;
         
         // 1. Sumar los km al total de distanciaRecorrida ESTA
@@ -85,9 +92,9 @@ public class Bicicleta {
 
     @Override
     public String toString() {
-        return "Bicicleta{" + "modelo=" + modelo + " (" + modo+ ") " + " -" + distanciaRecorrida+ " km -" + 
+        return "Bicicleta: " + "modelo=" + modelo + " (" + modo+ ") " + " -" + distanciaRecorrida+ " km -" + 
                 " Vel. Prom.:" + velocidadPromedio +"km/h" + " - cambios: " + cambiosActuales + 
-                " Psi: 22.5=" + presionNeumaticos + ", nuevaVelocidad=" + nuevaVelocidad + '}';
+                " Psi: 22.5=" + presionNeumaticos + ", nuevaVelocidad=" + nuevaVelocidad+". ";
          //retornar descripción como:
         // "EcoRider (eléctrica) - 22.0 km - Vel. Prom.: 23.1 km/h - Cambios: 4 - PSI: 22.5"
         
