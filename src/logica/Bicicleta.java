@@ -38,7 +38,12 @@ public class Bicicleta {
         //el metodo
         this.distanciaRecorrida += km;
         this.nuevaVelocidad = km/tiempoHoras; //no da bien el el primer viaje, perso dsp si
-        this.velocidadPromedio = (velocidadPromedio+nuevaVelocidad)/2;
+        if(velocidadPromedio == 0){
+            this.velocidadPromedio  =nuevaVelocidad;
+        }else{
+            this.velocidadPromedio = (velocidadPromedio+nuevaVelocidad)/2;
+        }
+        
         this.presionNeumaticos -= km/5 * 0.5;
         
         // 1. Sumar los km al total de distanciaRecorrida ESTA
