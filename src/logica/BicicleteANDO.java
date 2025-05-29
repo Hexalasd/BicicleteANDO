@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class BicicleteANDO {
 
     public static void main(String[] args) {
-        /*
+        
         
         Scanner scanner = new Scanner(System.in);
         ArrayList<Usuario> usuarios = new ArrayList<>();
@@ -53,7 +53,7 @@ public class BicicleteANDO {
             usuarios.add(new Usuario(nombreUsuarios, edadUsuarios, bicicletas.get(numIndiceBici-1)));
             System.out.println("\n");
         }
-        */
+
         
         
          
