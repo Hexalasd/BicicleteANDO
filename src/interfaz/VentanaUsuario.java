@@ -35,7 +35,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
         txtNombre = new javax.swing.JTextField();
         txtEdad = new javax.swing.JTextField();
         checkCasco = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
+        usuarioCrearUsuario = new javax.swing.JButton();
         comboBicicletas = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -43,7 +43,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setText("datos de Usuario");
+        jLabel1.setText("Datos de Usuario");
 
         checkCasco.setText("el casco esta puesto?");
         checkCasco.addActionListener(new java.awt.event.ActionListener() {
@@ -52,10 +52,10 @@ public class VentanaUsuario extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("crear usuario");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        usuarioCrearUsuario.setText("crear usuario");
+        usuarioCrearUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                usuarioCrearUsuarioActionPerformed(evt);
             }
         });
 
@@ -71,7 +71,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(usuarioCrearUsuario)
                 .addGap(144, 144, 144))
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
@@ -113,7 +113,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(comboBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(usuarioCrearUsuario)
                 .addGap(16, 16, 16))
         );
 
@@ -124,16 +124,20 @@ public class VentanaUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_checkCascoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void usuarioCrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioCrearUsuarioActionPerformed
      String nombre = txtNombre.getText();
-     int edad= Integer.parseInt(txtEdad.getText());
+     int edad= Integer.parseInt(txtEdad.getText());//toma datos y crea objeto
      Bicicleta bici = (Bicicleta) comboBicicletas.getSelectedItem();
-     
      Usuario nuevo = new Usuario(nombre, edad, bici);
-     if(checkCasco.isSelected()){
-    Sistema.agregarUsuario(nuevo);
-    }//GEN-LAST:event_jButton1ActionPerformed
-   JOptionPane.showMessageDialog(this, "Usuario Creado: " + nuevo.toString());
+     
+     if(checkCasco.isSelected()){ //pone casco si se selecciona
+     nuevo.ponerCasco();
+     
+    JOptionPane.showMessageDialog(this, "Usuario Creado: " + nuevo.toString()); //te avisa que se creo el ususario
+    }//GEN-LAST:event_usuarioCrearUsuarioActionPerformed
+   
+ 
+   
     }   
     /**
      * @param args the command line arguments
@@ -173,11 +177,11 @@ public class VentanaUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox checkCasco;
     private javax.swing.JComboBox<String> comboBicicletas;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JButton usuarioCrearUsuario;
     // End of variables declaration//GEN-END:variables
 }
