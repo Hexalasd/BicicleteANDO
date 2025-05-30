@@ -112,14 +112,21 @@ public class VentanaBicicleta extends javax.swing.JFrame {
     String modo = comboModo.getSelectedItem().toString();
     if(modelo.isEmpty()){
         JOptionPane.showMessageDialog(this, "el modelo no puede estar vacio");
+   
+        Bicicleta bicicletaActual = new Bicicleta(modelo, modo);
+    
+    
     }
+    
+    
+    
     }//GEN-LAST:event_AgregarbicimActionPerformed
       
-    Bicicleta nuevaBici=new Bicicleta(modelo, modo);
+    //Bicicleta nuevaBici=new Bicicleta(modelo, modo);
     
-    Principal.listaBicicletas.add(nuevaBici);
+    //Principal.listaBicicletas.add(nuevaBici);
    
-    JOptionPane.showMessageDialog(this, "Bicicleta agregada con éxito.");
+    //JOptionPane.showMessageDialog(this, "Bicicleta agregada con éxito.");
     
     
     /**

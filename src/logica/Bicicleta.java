@@ -96,13 +96,10 @@ public class Bicicleta {
     }
 
     @Override
-    public String toString() {
-        return "Bicicleta: " + "modelo=" + modelo + " (" + modo+ ") " + " -" + distanciaRecorrida+ " km -" + 
-                " Vel. Prom.:" + velocidadPromedio +"km/h" + " - cambios: " + cambiosActuales + 
-                " Psi: 22.5=" + presionNeumaticos + ", nuevaVelocidad=" + nuevaVelocidad+". ";
-         //retornar descripción como:
-        // "EcoRider (eléctrica) - 22.0 km - Vel. Prom.: 23.1 km/h - Cambios: 4 - PSI: 22.5"
-        
+  public String toString() {
+        return this.modelo + " (" + this.modo + ") - " + String.format("%.1f", this.distanciaRecorrida) + " km - Vel. Prom.: " +
+                String.format("%.1f", this.velocidadPromedio) + " km/h - Cambios: " + this.cambiosActuales +
+                " - PSI: " + String.format("%.1f", this.presionNeumaticos);
     }
     
     
