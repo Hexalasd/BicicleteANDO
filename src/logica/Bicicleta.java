@@ -10,7 +10,7 @@ public class Bicicleta {
     private double nuevaVelocidad;
     
     public Bicicleta(String modelo, String modo) {
-        this.modelo = modo;
+        this.modelo = modelo;
         if ((modo.equalsIgnoreCase("montaña") || modo.equalsIgnoreCase("urbano") || modo.equalsIgnoreCase("electrica"))){
             this.modo = modo;
         }
