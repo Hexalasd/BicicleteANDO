@@ -30,12 +30,16 @@ public class VentanaBicicleta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtModelo = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        comboModo = new javax.swing.JComboBox<>();
         Agregarbicim = new javax.swing.JButton();
+        rtbElectrico = new javax.swing.JRadioButton();
+        rtbMontaña = new javax.swing.JRadioButton();
+        rtbUrbana = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,13 +50,6 @@ public class VentanaBicicleta extends javax.swing.JFrame {
 
         jLabel3.setText("Modo");
 
-        comboModo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "urbano", "montaña", "electrica" }));
-        comboModo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboModoActionPerformed(evt);
-            }
-        });
-
         Agregarbicim.setText("agregar Bicicleta");
         Agregarbicim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,60 +57,85 @@ public class VentanaBicicleta extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(rtbElectrico);
+        rtbElectrico.setText("Electrico");
+
+        buttonGroup1.add(rtbMontaña);
+        rtbMontaña.setText("Montaña");
+
+        buttonGroup1.add(rtbUrbana);
+        rtbUrbana.setText("Urbana");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(comboModo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtModelo))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(141, Short.MAX_VALUE)
-                .addComponent(Agregarbicim)
-                .addGap(139, 139, 139))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(rtbElectrico, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rtbMontaña, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rtbUrbana, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(Agregarbicim)
+                        .addGap(119, 119, 119)))
+                .addGap(15, 15, 15))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
+                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(comboModo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
+                    .addComponent(rtbElectrico)
+                    .addComponent(rtbMontaña)
+                    .addComponent(rtbUrbana))
+                .addGap(18, 18, 18)
                 .addComponent(Agregarbicim)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void comboModoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboModoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboModoActionPerformed
-
     private void AgregarbicimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarbicimActionPerformed
     String modelo =txtModelo.getText();
-    String modo = comboModo.getSelectedItem().toString();
+    String modo = "";
+    if(rtbElectrico.isSelected()){
+        modo="urbano";
+    }else if(rtbMontaña.isSelected()){
+        modo="montaña";
+    }else if(rtbUrbana.isSelected()){
+        modo="urbano";
+    }
     if(modelo.isEmpty()){
         JOptionPane.showMessageDialog(this, "el modelo no puede estar vacio");
    
-        Bicicleta bicicletaActual = new Bicicleta(modelo, modo);
+        Bicicleta nuevaBici = new Bicicleta(modelo, modo);
+        Principal.agregarBicicleta(nuevaBici);
+        
+        JOptionPane.showMessageDialog(this, "bici Creada :"+nuevaBici.toString());
     
     
     }
@@ -166,10 +188,14 @@ public class VentanaBicicleta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Agregarbicim;
-    private javax.swing.JComboBox<String> comboModo;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JRadioButton rtbElectrico;
+    private javax.swing.JRadioButton rtbMontaña;
+    private javax.swing.JRadioButton rtbUrbana;
     private javax.swing.JTextField txtModelo;
     // End of variables declaration//GEN-END:variables
 }

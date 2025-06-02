@@ -1,6 +1,10 @@
 package logica;
 
 public class Bicicleta {
+
+    static void add(Bicicleta b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     private String modelo;
     private String modo; // "urbano", "montaña", "electrica"
     private double distanciaRecorrida; // en km
