@@ -129,18 +129,34 @@ public class VentanaBicicleta extends javax.swing.JFrame {
     }else if(rtbUrbana.isSelected()){
         modo="urbano";
     }
+     if(Principal.cont==3){
+        JOptionPane.showMessageDialog(this, "porfavor llene todos los campos");
+        
+    }
+     if(Principal.cont==10){
+        JOptionPane.showMessageDialog(this, "LLENA MODELO Y MODO ");
+        Principal.cont=0;
+     }
     if(modelo.isEmpty()){
+        Principal.cont++;
         JOptionPane.showMessageDialog(this, "el modelo no puede estar vacio");
+        return;
+    }
+    if(modo.isEmpty()){
+        Principal.cont++;
+        JOptionPane.showMessageDialog(this, "el modo no pueda estar vacio");
+        return;
+    }
    
         Bicicleta nuevaBici = new Bicicleta(modelo, modo);
         Principal.agregarBicicleta(nuevaBici);
         
-        JOptionPane.showMessageDialog(this, "bici Creada :"+nuevaBici.toString());
+    txtModelo.setText("");
+    rtbMontaña.setSelected(false);
+    rtbMontaña.setSelected(false);
+    rtbElectrico.setSelected(false);
     
-    
-    }
-    
-    
+    JOptionPane.showMessageDialog(this,"bici creada: "+nuevaBici.toString());
     
     }//GEN-LAST:event_AgregarbicimActionPerformed
       

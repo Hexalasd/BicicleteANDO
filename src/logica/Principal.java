@@ -6,7 +6,10 @@ package logica;
 
 import java.util.ArrayList;
 
+
 public class Principal {
+     public static int cont = 0;
+
      public static ArrayList<Bicicleta> listaBicicletas = new ArrayList<>();
      
      public static void agregarBicicleta(Bicicleta b){
