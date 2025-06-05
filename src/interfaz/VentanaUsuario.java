@@ -6,7 +6,7 @@ package interfaz;
 
 import javax.swing.JOptionPane;
 import logica.Bicicleta;
-import logica.Sistema;
+import logica.Principal;
 import logica.Usuario;
 
 /**
@@ -20,6 +20,14 @@ public class VentanaUsuario extends javax.swing.JFrame {
      */
     public VentanaUsuario() {
         initComponents();
+        
+    }
+    
+    public void CargarBiciCB(){
+         comboBicicletas.removeAllItems();
+         for (Bicicleta b : Principal.getBicicleta()) {
+         comboBicicletas.addItem(b.getModelo());
+         }
     }
 
     /**
@@ -39,6 +47,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
         comboBicicletas = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,6 +74,8 @@ public class VentanaUsuario extends javax.swing.JFrame {
 
         jLabel3.setText("Ingresar Edad");
 
+        jLabel4.setText("Bicicleta ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -78,9 +89,8 @@ public class VentanaUsuario extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(checkCasco)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(checkCasco))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,7 +103,12 @@ public class VentanaUsuario extends javax.swing.JFrame {
                                 .addGap(133, 133, 133))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(comboBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,7 +126,9 @@ public class VentanaUsuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(checkCasco)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(comboBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(comboBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(usuarioCrearUsuario)
                 .addGap(16, 16, 16))
@@ -127,8 +144,35 @@ public class VentanaUsuario extends javax.swing.JFrame {
     private void usuarioCrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioCrearUsuarioActionPerformed
      String nombre = txtNombre.getText();
      int edad= Integer.parseInt(txtEdad.getText());//toma datos y crea objeto
-     Bicicleta bici = (Bicicleta) comboBicicletas.getSelectedItem();
+     Bicicleta bici= null;
      Usuario nuevo = new Usuario(nombre, edad, bici);
+     
+     
+     if(nombre.isEmpty()){
+         JOptionPane.showMessageDialog(this, "porfavor llene el todos los campos ");
+         return;
+     }
+     if(comboBicicletas.getItemCount()==0){
+         JOptionPane.showMessageDialog(this, " se necesita al menos 1 bicileta creada antes de registrar usuario ");
+         return;
+     }     
+     
+     String modeloSelec =(String) comboBicicletas.getSelectedItem();
+     
+     
+     bici=null;
+     for(Bicicleta b : Principal.getBicicleta()){
+         if(b.getModelo().equals(modeloSelec)){
+             break;
+         }
+     }
+     
+     if(bici==null){
+         JOptionPane.showMessageDialog(this," no se encontro una bici con ese modelo ");
+         return;
+     }
+     
+    
      
      if(checkCasco.isSelected()){ //pone casco si se selecciona
      nuevo.ponerCasco();
@@ -180,6 +224,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JButton usuarioCrearUsuario;
