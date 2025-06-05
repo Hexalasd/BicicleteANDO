@@ -20,6 +20,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
      */
     public VentanaUsuario() {
         initComponents();
+        CargarBiciCB();
         
     }
     
@@ -48,6 +49,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,6 +77,13 @@ public class VentanaUsuario extends javax.swing.JFrame {
         jLabel3.setText("Ingresar Edad");
 
         jLabel4.setText("Bicicleta ");
+
+        btnVolver.setText("volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,11 +118,17 @@ public class VentanaUsuario extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(comboBicicletas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(btnVolver)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(9, 9, 9)
+                .addComponent(btnVolver)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -167,22 +182,28 @@ public class VentanaUsuario extends javax.swing.JFrame {
          }
      }
      
-     if(bici==null){
+     /*if(bici==null){
          JOptionPane.showMessageDialog(this," no se encontro una bici con ese modelo ");
          return;
-     }
+     }*/
      
     
-     
-     if(checkCasco.isSelected()){ //pone casco si se selecciona
+     //pone casco si se selecciona
+     if(checkCasco.isSelected()){ 
      nuevo.ponerCasco();
      
     JOptionPane.showMessageDialog(this, "Usuario Creado: " + nuevo.toString()); //te avisa que se creo el ususario
     }//GEN-LAST:event_usuarioCrearUsuarioActionPerformed
+    }
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        this.dispose(); 
+        new ventanaPrincipal().setVisible(true); 
+    }//GEN-LAST:event_btnVolverActionPerformed
    
  
    
-    }   
+     
+    
     /**
      * @param args the command line arguments
      */
@@ -219,6 +240,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnVolver;
     private javax.swing.JCheckBox checkCasco;
     private javax.swing.JComboBox<String> comboBicicletas;
     private javax.swing.JLabel jLabel1;
