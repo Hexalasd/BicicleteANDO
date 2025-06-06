@@ -6,6 +6,7 @@ import logica.Bicicleta;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import logica.Sistema;
 
 public class VentanaControlUsuario extends JFrame {
     private JComboBox<Usuario> comboUsuarios;
@@ -19,9 +20,9 @@ public class VentanaControlUsuario extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // Panel de selección
+        // esto fue hecho por mi 100000% real no fake
         JPanel panelSuperior = new JPanel();
-        comboUsuarios = new JComboBox<>(VentanaUsuario.usuarios.toArray(new Usuario[0]));
+         comboUsuarios = new JComboBox<>(Sistema.getUsuarios().toArray(new Usuario[0]));
         panelSuperior.add(new JLabel("Usuario:"));
         panelSuperior.add(comboUsuarios);
 
@@ -95,7 +96,7 @@ public class VentanaControlUsuario extends JFrame {
             }
         });
 
-        // Mostrar info inicial
+        // Mostra la info inicial
         mostrarInfo();
     }
 
