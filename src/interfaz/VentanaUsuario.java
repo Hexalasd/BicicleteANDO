@@ -248,4 +248,9 @@ public class VentanaUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombre;
     private javax.swing.JButton usuarioCrearUsuario;
     // End of variables declaration//GEN-END:variables
+
+    static class usuarios {
+
+       
+    }
 }

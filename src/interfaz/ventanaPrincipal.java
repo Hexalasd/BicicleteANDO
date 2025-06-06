@@ -33,8 +33,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnControlUsuarios = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,9 +55,12 @@ public class ventanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("subir usuario ");
-
-        jButton4.setText("subir bicicleta");
+        btnControlUsuarios.setText("Control usuario");
+        btnControlUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnControlUsuariosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,8 +69,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4)
-                    .addComponent(jButton3)
+                    .addComponent(btnControlUsuarios)
                     .addComponent(jButton2)
                     .addComponent(jButton1)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -84,10 +85,8 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnControlUsuarios)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -111,6 +110,13 @@ public class ventanaPrincipal extends javax.swing.JFrame {
        this.setVisible(false);
        
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnControlUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnControlUsuariosActionPerformed
+        btnControlUsuarios.addActionListener(e -> {
+    VentanaControlUsuario ventana = new VentanaControlUsuario();
+    ventana.setVisible(true);
+});
+    }//GEN-LAST:event_btnControlUsuariosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,10 +154,9 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnControlUsuarios;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

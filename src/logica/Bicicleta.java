@@ -138,6 +138,10 @@ public class Bicicleta {
     public double getPresionNeumaticos() {
         return presionNeumaticos;
     }
+
+    public void acelerar() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     
     
