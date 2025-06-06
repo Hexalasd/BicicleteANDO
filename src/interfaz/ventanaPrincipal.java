@@ -4,11 +4,15 @@
  */
 package interfaz;
 
+import javax.swing.JOptionPane;
+import logica.Principal;
+
 /**
  *
  * @author hexal
  */
 public class ventanaPrincipal extends javax.swing.JFrame {
+
 
     /**
      * Creates new form ventanaPrincipal
@@ -90,6 +94,10 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (Principal.getBicicleta().isEmpty()) {
+        JOptionPane.showMessageDialog(this,"debe crear al menos una bici antes de crea un usuario");
+        return;
+    }
        VentanaUsuario ventanaUsuario = new VentanaUsuario();
        ventanaUsuario.setVisible(true);
        this.setVisible(false);

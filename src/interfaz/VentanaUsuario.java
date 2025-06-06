@@ -160,7 +160,6 @@ public class VentanaUsuario extends javax.swing.JFrame {
      String nombre = txtNombre.getText();
      int edad= Integer.parseInt(txtEdad.getText());//toma datos y crea objeto
      Bicicleta bici= null;
-     Usuario nuevo = new Usuario(nombre, edad, bici);
      
      
      if(nombre.isEmpty()){
@@ -178,23 +177,21 @@ public class VentanaUsuario extends javax.swing.JFrame {
      bici=null;
      for(Bicicleta b : Principal.getBicicleta()){
          if(b.getModelo().equals(modeloSelec)){
+             bici=b;
              break;
          }
      }
-     
-     /*if(bici==null){
-         JOptionPane.showMessageDialog(this," no se encontro una bici con ese modelo ");
-         return;
-     }*/
+      Usuario nuevo = new Usuario(nombre, edad, bici);
      
     
      //pone casco si se selecciona
      if(checkCasco.isSelected()){ 
      nuevo.ponerCasco();
      
-    JOptionPane.showMessageDialog(this, "Usuario Creado: " + nuevo.toString()); //te avisa que se creo el ususario
+     JOptionPane.showMessageDialog(this, "Usuario Creado: " + nuevo.toString());
     }//GEN-LAST:event_usuarioCrearUsuarioActionPerformed
     }
+    
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         this.dispose(); 
         new ventanaPrincipal().setVisible(true); 
