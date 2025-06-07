@@ -23,9 +23,9 @@ public class Usuario {
         cascoPuesto = false;
     }
 
-   public void hacerViaje(double km, double tiempoHoras) { //FATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   public void hacerViaje(double km, double tiempoHoras) { 
          // 1. Verificar si el casco está puesto 
-        //    Si no está, mostrar mensaje y no permitir el viaje ESTA
+        //    Si no está, mostrar mensaje y no permitir el viaje 
         // 2. Si está puesto, registrar el viaje en la bicicleta
         //    usando el método registrarViaje() 
         if (cascoPuesto) {
@@ -84,5 +84,9 @@ public class Usuario {
         this.bici = bici;
     }
 
-    
+    public void hacerVaje(double km, double tiempoHoras) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+  
 }

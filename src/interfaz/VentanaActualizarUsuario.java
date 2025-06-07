@@ -4,12 +4,16 @@
  */
 package interfaz;
 import logica.ArrayUsuarios;
+import static logica.ArrayUsuarios.usuarios;
 import logica.Usuario;
 /**
  *
- * @author 57815971
+ * @author 
  */
 public class VentanaActualizarUsuario extends javax.swing.JFrame {
+    public byte contador=0;
+    public double km;
+    public double tiempoHoras;
 
     /**
      * Creates new form VentanaActualizarUsuario
@@ -18,7 +22,12 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
         initComponents();
         cargarCombo();
     }
-
+    private void cargarCombo() {
+        comboUsuarios.removeAllItems();
+        for (Usuario u : ArrayUsuarios.getUsuarios()) {
+            comboUsuarios.addItem(u.getNombre());
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -40,6 +49,10 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
         jButton11 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtArea = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txtArea2 = new javax.swing.JTextArea();
+        btnEnviar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -103,52 +116,83 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
         txtArea.setText("Elija un usuario y toque un botón para aplicarle un método");
         jScrollPane1.setViewportView(txtArea);
 
+        txtArea2.setColumns(20);
+        txtArea2.setRows(5);
+        jScrollPane3.setViewportView(txtArea2);
+
+        btnEnviar.setText("Enviar");
+        btnEnviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnviarActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("volver");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEnviar)
+                        .addGap(75, 75, 75))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnRevisarBici)
-                            .addComponent(btnViaje))
+                        .addComponent(btnViaje)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnMostrarDatos)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnEditarNombre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnEditarEdad))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnEstadoCasco)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnCascoPuesto))))
+                        .addComponent(btnEstadoCasco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCascoPuesto))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnRevisarBici)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnMostrarDatos)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnEditarNombre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnEditarEdad))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(73, 73, 73)
                         .addComponent(jLabel1)
                         .addGap(33, 33, 33)
                         .addComponent(comboUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(25, 25, 25)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton11))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton11)
-                .addGap(130, 130, 130))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(comboUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(comboUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnEnviar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEstadoCasco)
                     .addComponent(btnCascoPuesto)
@@ -161,7 +205,7 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
                     .addComponent(btnRevisarBici))
                 .addGap(18, 18, 18)
                 .addComponent(jButton11)
-                .addGap(43, 43, 43))
+                .addGap(27, 27, 27))
         );
 
         pack();
@@ -172,30 +216,37 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_comboUsuariosActionPerformed
 
     private void btnViajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViajeActionPerformed
-        double km;
-        double tiempoHoras;
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
         
-        txtArea.setText("Ingrese la cantidad de km recorridos: ");
-        txtArea.setText("Ingrese la cantidad de horas tomadas: ");
-        noseomohaer.hacerVaje(km, tiempoHoras);
+        txtArea2.setEditable(true);
+        txtArea.setText("Ingrese la cantidad de km recorridos en este campo --> ");
+        while(contador!=1){
+        }
+        txtArea2.setEditable(true);
+        txtArea.setText("Ingrese la cantidad de horas tomadas en este campo --> ");
+        while(contador==1){
+        }
+        UsuarioSelec.hacerVaje(km, tiempoHoras);
     }//GEN-LAST:event_btnViajeActionPerformed
 
     private void btnEstadoCascoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadoCascoActionPerformed
-        //AYUDAAAAA
         
-        if (agarrar el usuario.isCascoPuesto()){
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+        
+        if (UsuarioSelec.isCascoPuesto()){
         txtArea.setText("Se quitó el casco");
-        nosecomohacer.sacarCasco();
+        UsuarioSelec.sacarCasco();
         }
         else{
-                txtArea.setText("Se puso el casco");
-                nosecomohacer.ponerCasco;
-                }
+        txtArea.setText("Se puso el casco");
+        UsuarioSelec.ponerCasco();
+        }
 
     }//GEN-LAST:event_btnEstadoCascoActionPerformed
 
     private void btnCascoPuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCascoPuestoActionPerformed
-        if(nosecomosepone.isCascoPuesto()){
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+        if(UsuarioSelec.isCascoPuesto()){
             txtArea.setText("El casco esta puesto");
         }
         else{
@@ -204,21 +255,45 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCascoPuestoActionPerformed
 
     private void btnRevisarBiciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRevisarBiciActionPerformed
-        if(nosecomosepone.revisarBicicleta().equals("")){
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+        
+        if(UsuarioSelec.revisarBicicleta().equals("")){
             txtArea.setText("La bici no no necesita nada");
         }
         else{
-            txtArea.setText("La bicicleta precisa "+nosecomoepone.revisarBicicleta());
+            txtArea.setText("La bicicleta precisa "+UsuarioSelec.revisarBicicleta());
         }
     }//GEN-LAST:event_btnRevisarBiciActionPerformed
 
     private void btnMostrarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarDatosActionPerformed
-        txtArea.setText(nosecomosepone.toString());
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+        txtArea.setText(UsuarioSelec.toString());
     }//GEN-LAST:event_btnMostrarDatosActionPerformed
 
     private void btnEditarEdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEdadActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEditarEdadActionPerformed
+
+    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
+       if(contador==0){
+            km=Double.parseDouble(txtArea2.getText()); 
+            txtArea2.setEditable(false);
+            txtArea2.setText("");
+            contador++;
+       }
+       else{
+            tiempoHoras=Double.parseDouble(txtArea2.getText()); 
+            txtArea2.setEditable(false);
+            txtArea2.setText("");
+            contador=0;
+       }
+       
+    }//GEN-LAST:event_btnEnviarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.dispose();
+        new ventanaPrincipal().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -259,20 +334,21 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
     private javax.swing.JButton btnCascoPuesto;
     private javax.swing.JButton btnEditarEdad;
     private javax.swing.JButton btnEditarNombre;
+    private javax.swing.JButton btnEnviar;
     private javax.swing.JButton btnEstadoCasco;
     private javax.swing.JButton btnMostrarDatos;
     private javax.swing.JButton btnRevisarBici;
     private javax.swing.JButton btnViaje;
     private javax.swing.JComboBox<String> comboUsuarios;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton11;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea txtArea;
+    private javax.swing.JTextArea txtArea2;
     // End of variables declaration//GEN-END:variables
 
-    private void cargarCombo() {
-        for (Usuario u : ArrayUsuarios.getUsuarios()) {
-        comboUsuarios.addItem(u);
-        }
-    }
+
 }
+
