@@ -6,7 +6,7 @@ package interfaz;
 
 import javax.swing.JOptionPane;
 import logica.Bicicleta;
-import logica.Principal;
+import logica.ArrayBicicletas;
 
 /**
  *
@@ -144,27 +144,27 @@ public class VentanaBicicleta extends javax.swing.JFrame {
     }else if(rtbUrbana.isSelected()){
         modo="urbano";
     }
-     if(Principal.cont==3){
+     if(ArrayBicicletas.cont==3){
         JOptionPane.showMessageDialog(this, "porfavor llene todos los campos");
         
     }
-     if(Principal.cont==10){
+     if(ArrayBicicletas.cont==10){
         JOptionPane.showMessageDialog(this, "LLENA MODELO Y MODO ");
-        Principal.cont=0;
+        ArrayBicicletas.cont=0;
      }
     if(modelo.isEmpty()){
-        Principal.cont++;
+        ArrayBicicletas.cont++;
         JOptionPane.showMessageDialog(this, "el modelo no puede estar vacio");
         return;
     }
     if(modo.isEmpty()){
-        Principal.cont++;
+        ArrayBicicletas.cont++;
         JOptionPane.showMessageDialog(this, "el modo no pueda estar vacio");
         return;
     }
    
         Bicicleta nuevaBici = new Bicicleta(modelo, modo);
-        Principal.agregarBicicleta(nuevaBici);
+        ArrayBicicletas.agregarBicicleta(nuevaBici);
         
     txtModelo.setText("");
     rtbMontaña.setSelected(false);

@@ -6,7 +6,7 @@ package interfaz;
 
 import javax.swing.JOptionPane;
 import logica.Bicicleta;
-import logica.Principal;
+import logica.ArrayBicicletas;
 import logica.Usuario;
 
 /**
@@ -26,7 +26,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
     
     public void CargarBiciCB(){
          comboBicicletas.removeAllItems();
-         for (Bicicleta b : Principal.getBicicleta()) {
+         for (Bicicleta b : ArrayBicicletas.getBicicleta()) {
          comboBicicletas.addItem(b.getModelo());
          }
     }
@@ -71,6 +71,11 @@ public class VentanaUsuario extends javax.swing.JFrame {
         });
 
         comboBicicletas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBicicletas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBicicletasActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Ingresar Nombre");
 
@@ -175,7 +180,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
      
      
      bici=null;
-     for(Bicicleta b : Principal.getBicicleta()){
+     for(Bicicleta b : ArrayBicicletas.getBicicleta()){
          if(b.getModelo().equals(modeloSelec)){
              bici=b;
              break;
@@ -196,6 +201,10 @@ public class VentanaUsuario extends javax.swing.JFrame {
         this.dispose(); 
         new ventanaPrincipal().setVisible(true); 
     }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void comboBicicletasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBicicletasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBicicletasActionPerformed
    
  
    

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package interfaz;
-
+import logica.Usuario;
 /**
  *
  * @author 57815971
@@ -26,21 +26,197 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        btnViaje = new javax.swing.JButton();
+        btnRevisarBici = new javax.swing.JButton();
+        btnEstadoCasco = new javax.swing.JButton();
+        btnMostrarDatos = new javax.swing.JButton();
+        btnCascoPuesto = new javax.swing.JButton();
+        btnEditarNombre = new javax.swing.JButton();
+        btnEditarEdad = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtArea = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Usuario:");
+
+        btnViaje.setText("Hacer Viaje");
+        btnViaje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViajeActionPerformed(evt);
+            }
+        });
+
+        btnRevisarBici.setText("Revisar bicicleta");
+        btnRevisarBici.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRevisarBiciActionPerformed(evt);
+            }
+        });
+
+        btnEstadoCasco.setText("Poner/quitar casco");
+        btnEstadoCasco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEstadoCascoActionPerformed(evt);
+            }
+        });
+
+        btnMostrarDatos.setText("Mostrar datos");
+        btnMostrarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarDatosActionPerformed(evt);
+            }
+        });
+
+        btnCascoPuesto.setText("Se tiene el casco puesto?");
+        btnCascoPuesto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCascoPuestoActionPerformed(evt);
+            }
+        });
+
+        btnEditarNombre.setText("Editar nombre");
+
+        btnEditarEdad.setText("Editar edad");
+        btnEditarEdad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarEdadActionPerformed(evt);
+            }
+        });
+
+        jButton11.setText("para la bici pero no se como hacer y no quiero hacer algoq eu se vaya a tener que editar despuse");
+
+        txtArea.setColumns(20);
+        txtArea.setRows(5);
+        txtArea.setText("Elija un usuario y toque un botón para aplicarle un método");
+        jScrollPane1.setViewportView(txtArea);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnRevisarBici)
+                            .addComponent(btnViaje))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnMostrarDatos)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnEditarNombre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnEditarEdad))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnEstadoCasco)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnCascoPuesto))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel1)
+                        .addGap(33, 33, 33)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton11)
+                .addGap(130, 130, 130))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEstadoCasco)
+                    .addComponent(btnCascoPuesto)
+                    .addComponent(btnViaje))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMostrarDatos)
+                    .addComponent(btnEditarNombre)
+                    .addComponent(btnEditarEdad)
+                    .addComponent(btnRevisarBici))
+                .addGap(18, 18, 18)
+                .addComponent(jButton11)
+                .addGap(43, 43, 43))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void btnViajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViajeActionPerformed
+        double km;
+        double tiempoHoras;
+        
+        txtArea.setText("Ingrese la cantidad de km recorridos: ");
+        txtArea.setText("Ingrese la cantidad de horas tomadas: ");
+        noseomohaer.hacerVaje(km, tiempoHoras);
+    }//GEN-LAST:event_btnViajeActionPerformed
+
+    private void btnEstadoCascoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadoCascoActionPerformed
+        //AYUDAAAAA
+        
+        if (agarrar el usuario.isCascoPuesto()){
+        txtArea.setText("Se quitó el casco");
+        nosecomohacer.sacarCasco();
+        }
+        else{
+                txtArea.setText("Se puso el casco");
+                nosecomohacer.ponerCasco;
+                }
+
+    }//GEN-LAST:event_btnEstadoCascoActionPerformed
+
+    private void btnCascoPuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCascoPuestoActionPerformed
+        if(nosecomosepone.isCascoPuesto()){
+            txtArea.setText("El casco esta puesto");
+        }
+        else{
+            txtArea.setText("El casco no esta puesto");
+        }
+    }//GEN-LAST:event_btnCascoPuestoActionPerformed
+
+    private void btnRevisarBiciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRevisarBiciActionPerformed
+        if(nosecomosepone.revisarBicicleta().equals("")){
+            txtArea.setText("La bici no no necesita nada");
+        }
+        else{
+            txtArea.setText("La bicicleta precisa "+nosecomoepone.revisarBicicleta());
+        }
+    }//GEN-LAST:event_btnRevisarBiciActionPerformed
+
+    private void btnMostrarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarDatosActionPerformed
+        txtArea.setText(nosecomosepone.toString());
+    }//GEN-LAST:event_btnMostrarDatosActionPerformed
+
+    private void btnEditarEdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEdadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEditarEdadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +254,17 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCascoPuesto;
+    private javax.swing.JButton btnEditarEdad;
+    private javax.swing.JButton btnEditarNombre;
+    private javax.swing.JButton btnEstadoCasco;
+    private javax.swing.JButton btnMostrarDatos;
+    private javax.swing.JButton btnRevisarBici;
+    private javax.swing.JButton btnViaje;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea txtArea;
     // End of variables declaration//GEN-END:variables
 }

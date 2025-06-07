@@ -5,7 +5,7 @@
 package interfaz;
 
 import javax.swing.JOptionPane;
-import logica.Principal;
+import logica.ArrayBicicletas;
 
 /**
  *
@@ -93,7 +93,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (Principal.getBicicleta().isEmpty()) {
+        if (ArrayBicicletas.getBicicleta().isEmpty()) {
         JOptionPane.showMessageDialog(this,"debe crear al menos una bici antes de crea un usuario");
         return;
     }
