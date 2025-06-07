@@ -1,3 +1,4 @@
+
 package logica;
 
 public class Usuario {
@@ -22,7 +23,7 @@ public class Usuario {
         cascoPuesto = false;
     }
 
-   public void hacerViaje(double km, double tiempoHoras) {
+   public void hacerViaje(double km, double tiempoHoras) { //FATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
          // 1. Verificar si el casco está puesto 
         //    Si no está, mostrar mensaje y no permitir el viaje ESTA
         // 2. Si está puesto, registrar el viaje en la bicicleta

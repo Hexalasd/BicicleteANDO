@@ -2,7 +2,7 @@ package logica;
 
 import java.util.ArrayList;
 
-public class Sistema {
+public class ArrayUsuarios {
     public static ArrayList<Usuario> usuarios = new ArrayList<>();
 
     public static void agregarUsuario(Usuario u) {
