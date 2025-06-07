@@ -7,6 +7,7 @@ package interfaz;
 import javax.swing.JOptionPane;
 import logica.Bicicleta;
 import logica.ArrayBicicletas;
+import logica.ArrayUsuarios;
 import logica.Usuario;
 
 /**
@@ -192,6 +193,8 @@ public class VentanaUsuario extends javax.swing.JFrame {
      //pone casco si se selecciona
      if(checkCasco.isSelected()){ 
      nuevo.ponerCasco();
+     
+     ArrayUsuarios.agregarUsuario(nuevo);
      
      JOptionPane.showMessageDialog(this, "Usuario Creado: " + nuevo.toString());
     }//GEN-LAST:event_usuarioCrearUsuarioActionPerformed

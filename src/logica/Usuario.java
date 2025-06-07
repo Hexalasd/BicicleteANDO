@@ -52,7 +52,7 @@ public class Usuario {
     @Override
     public String toString() {
         // Mostrar resumen de bici y advertencias si necesita inflado o carga
-        return nombre + " (" + edad + "): " +  bici.toString()+ revisarBicicleta();
+        return this.nombre + " (" + this.edad + "): " +  this.bici.toString()+ revisarBicicleta();
         
     }
 

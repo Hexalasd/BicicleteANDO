@@ -4,7 +4,6 @@
  */
 package interfaz;
 import logica.ArrayUsuarios;
-import static logica.ArrayUsuarios.usuarios;
 import logica.Usuario;
 /**
  *
@@ -23,11 +22,11 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
         cargarCombo();
     }
     private void cargarCombo() {
-        comboUsuarios.removeAllItems();
-        for (Usuario u : ArrayUsuarios.getUsuarios()) {
-            comboUsuarios.addItem(u.getNombre());
-        }
+    comboUsuarios.removeAllItems();
+    for (Usuario u : ArrayUsuarios.getUsuarios()) {
+        comboUsuarios.addItem(u);  
     }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
