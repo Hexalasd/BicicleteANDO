@@ -113,7 +113,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
 
     private void btnActualizarlUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarlUsuariosActionPerformed
         btnActualizarlUsuarios.addActionListener(e -> {
-        VentanaActualizarlUsuario ventana = new VentanaActualizarlUsuario();
+        VentanaActualizarlUsuarioMENTIRA ventana = new VentanaActualizarlUsuarioMENTIRA();
         ventana.setVisible(true);
         this.setVisible(false);
 });

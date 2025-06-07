@@ -8,13 +8,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import logica.Sistema;
 
-public class VentanaActualizarlUsuario extends JFrame {
+public class VentanaActualizarlUsuarioMENTIRA extends JFrame {
     private JComboBox<Usuario> comboUsuarios;
     private JTextArea textInfo;
     private JButton btnViaje, btnCambiarCambio, btnActualizar, btnInflar,
             btnRevsiarBici;
 
-    public VentanaActualizarlUsuario() {
+    public VentanaActualizarlUsuarioMENTIRA() {
         setTitle("Control de Bicicletas por Usuario");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(500, 400);
