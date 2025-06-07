@@ -83,10 +83,5 @@ public class Usuario {
     public void setBici(Bicicleta bici) {
         this.bici = bici;
     }
-
-    public void hacerVaje(double km, double tiempoHoras) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
   
 }

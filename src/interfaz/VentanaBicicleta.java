@@ -177,7 +177,7 @@ public class VentanaBicicleta extends javax.swing.JFrame {
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
          this.dispose(); 
-         new ventanaPrincipal().setVisible(true); 
+         new VentanaPrincipal().setVisible(true); 
     }//GEN-LAST:event_btnVolverActionPerformed
       
     //Bicicleta nuevaBici=new Bicicleta(modelo, modo);
