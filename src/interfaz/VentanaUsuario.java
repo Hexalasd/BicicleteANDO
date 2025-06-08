@@ -202,7 +202,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
     
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         this.dispose(); 
-        new VentanaPrincipal().setVisible(true); 
+        new ventanaPrincipal().setVisible(true); 
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void comboBicicletasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBicicletasActionPerformed
