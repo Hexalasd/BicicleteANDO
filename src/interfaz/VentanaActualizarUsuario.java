@@ -37,141 +37,89 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jFrame1 = new javax.swing.JFrame();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jPanel3 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtArea = new javax.swing.JTextArea();
-        btnNecesitaInflado = new javax.swing.JButton();
-        btnCambiarCambios = new javax.swing.JButton();
-        btnInflar = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        btnCambiosActuales = new javax.swing.JButton();
-        comboUsuarios = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
-        btnViaje = new javax.swing.JButton();
-        btnRevisarBici = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
         btnEstadoCasco = new javax.swing.JButton();
         btnMostrarDatos = new javax.swing.JButton();
         btnCascoPuesto = new javax.swing.JButton();
         btnEditarNombre = new javax.swing.JButton();
         btnEditarEdad = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Gestión de Usuario y Bicicleta");
-        setName("Gestión de Usuario y Bicicleta"); // NOI18N
-
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
-
-        jButton1.setText("volver");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        btnViaje = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        btnRevisarBici = new javax.swing.JButton();
+        btnInflar = new javax.swing.JButton();
+        btnCambiarCambios = new javax.swing.JButton();
+        btnCambiosActuales = new javax.swing.JButton();
+        btnNecesitaInflado = new javax.swing.JButton();
+        comboUsuarios = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtArea = new javax.swing.JTextArea();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 100, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+            .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 153));
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
-        txtArea.setBackground(new java.awt.Color(255, 255, 255));
-        txtArea.setColumns(20);
-        txtArea.setRows(5);
-        txtArea.setText("Elija un usuario y toque un botón para aplicarle un método");
-        jScrollPane1.setViewportView(txtArea);
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
-        btnNecesitaInflado.setBackground(new java.awt.Color(255, 153, 102));
-        btnNecesitaInflado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnNecesitaInflado.setText("Necesita inflado?");
-        btnNecesitaInflado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNecesitaInfladoActionPerformed(evt);
-            }
-        });
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gestión de Usuario y Bicicleta");
+        setName("Gestión de Usuario y Bicicleta"); // NOI18N
 
-        btnCambiarCambios.setBackground(new java.awt.Color(255, 153, 102));
-        btnCambiarCambios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnCambiarCambios.setText("Cambiar cambios");
-        btnCambiarCambios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCambiarCambiosActionPerformed(evt);
-            }
-        });
+        jPanel3.setBackground(new java.awt.Color(33, 27, 44));
 
-        btnInflar.setBackground(new java.awt.Color(255, 153, 102));
-        btnInflar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnInflar.setText("Inflar ruedas");
-        btnInflar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInflarActionPerformed(evt);
-            }
-        });
+        jPanel2.setBackground(new java.awt.Color(61, 50, 69));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        jPanel4.setBackground(new java.awt.Color(33, 27, 44));
+        jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 153, 51));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Usuario");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 153, 0));
-        jLabel3.setText("Bicicleta");
+        jPanel9.setBackground(new java.awt.Color(61, 50, 69));
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        btnCambiosActuales.setBackground(new java.awt.Color(255, 153, 102));
-        btnCambiosActuales.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnCambiosActuales.setText("Cambios actuales");
-        btnCambiosActuales.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCambiosActualesActionPerformed(evt);
-            }
-        });
-
-        comboUsuarios.setBackground(new java.awt.Color(255, 153, 102));
-        comboUsuarios.setForeground(new java.awt.Color(0, 0, 0));
-        comboUsuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboUsuariosActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setBackground(new java.awt.Color(204, 102, 0));
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 153, 51));
-        jLabel1.setText("Usuario:");
-
-        btnViaje.setBackground(new java.awt.Color(255, 153, 102));
-        btnViaje.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnViaje.setText("Hacer Viaje");
-        btnViaje.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViajeActionPerformed(evt);
-            }
-        });
-
-        btnRevisarBici.setBackground(new java.awt.Color(255, 153, 102));
-        btnRevisarBici.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnRevisarBici.setText("Revisar bicicleta");
-        btnRevisarBici.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRevisarBiciActionPerformed(evt);
-            }
-        });
-
-        btnEstadoCasco.setBackground(new java.awt.Color(255, 153, 102));
-        btnEstadoCasco.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnEstadoCasco.setBackground(new java.awt.Color(33, 27, 44));
+        btnEstadoCasco.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnEstadoCasco.setText("Poner/quitar casco");
         btnEstadoCasco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +127,7 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
             }
         });
 
-        btnMostrarDatos.setBackground(new java.awt.Color(255, 153, 102));
+        btnMostrarDatos.setBackground(new java.awt.Color(33, 27, 44));
         btnMostrarDatos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnMostrarDatos.setText("Mostrar datos");
         btnMostrarDatos.addActionListener(new java.awt.event.ActionListener() {
@@ -188,7 +136,7 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
             }
         });
 
-        btnCascoPuesto.setBackground(new java.awt.Color(255, 153, 102));
+        btnCascoPuesto.setBackground(new java.awt.Color(33, 27, 44));
         btnCascoPuesto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnCascoPuesto.setText("Se tiene el casco puesto?");
         btnCascoPuesto.addActionListener(new java.awt.event.ActionListener() {
@@ -197,7 +145,7 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
             }
         });
 
-        btnEditarNombre.setBackground(new java.awt.Color(255, 153, 102));
+        btnEditarNombre.setBackground(new java.awt.Color(33, 27, 44));
         btnEditarNombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnEditarNombre.setText("Editar nombre");
         btnEditarNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -206,7 +154,7 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
             }
         });
 
-        btnEditarEdad.setBackground(new java.awt.Color(255, 153, 102));
+        btnEditarEdad.setBackground(new java.awt.Color(33, 27, 44));
         btnEditarEdad.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnEditarEdad.setText("Editar edad");
         btnEditarEdad.addActionListener(new java.awt.event.ActionListener() {
@@ -215,111 +163,304 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
             }
         });
 
+        btnViaje.setBackground(new java.awt.Color(33, 27, 44));
+        btnViaje.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnViaje.setText("Hacer Viaje");
+        btnViaje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViajeActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnViaje, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnMostrarDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEditarEdad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEditarNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCascoPuesto, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+                    .addComponent(btnEstadoCasco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnEstadoCasco)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCascoPuesto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnEditarNombre)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnEditarEdad)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnViaje)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnMostrarDatos)
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanel5.setBackground(new java.awt.Color(33, 27, 44));
+        jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Bicicleta");
+
+        jPanel8.setBackground(new java.awt.Color(61, 50, 69));
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        btnRevisarBici.setBackground(new java.awt.Color(33, 27, 44));
+        btnRevisarBici.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnRevisarBici.setText("Revisar bicicleta");
+        btnRevisarBici.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRevisarBiciActionPerformed(evt);
+            }
+        });
+
+        btnInflar.setBackground(new java.awt.Color(33, 27, 44));
+        btnInflar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnInflar.setText("Inflar ruedas");
+        btnInflar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInflarActionPerformed(evt);
+            }
+        });
+
+        btnCambiarCambios.setBackground(new java.awt.Color(33, 27, 44));
+        btnCambiarCambios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnCambiarCambios.setText("Cambiar cambios");
+        btnCambiarCambios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCambiarCambiosActionPerformed(evt);
+            }
+        });
+
+        btnCambiosActuales.setBackground(new java.awt.Color(33, 27, 44));
+        btnCambiosActuales.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnCambiosActuales.setText("Cambios actuales");
+        btnCambiosActuales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCambiosActualesActionPerformed(evt);
+            }
+        });
+
+        btnNecesitaInflado.setBackground(new java.awt.Color(33, 27, 44));
+        btnNecesitaInflado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnNecesitaInflado.setText("Necesita inflado?");
+        btnNecesitaInflado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNecesitaInfladoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCambiosActuales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnInflar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnRevisarBici, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCambiarCambios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnNecesitaInflado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnRevisarBici)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnInflar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCambiarCambios)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCambiosActuales)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnNecesitaInflado)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(jLabel3)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        comboUsuarios.setBackground(new java.awt.Color(255, 255, 255));
+        comboUsuarios.setForeground(new java.awt.Color(0, 0, 0));
+        comboUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboUsuariosActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setBackground(new java.awt.Color(204, 102, 0));
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/icons/usermorao.png"))); // NOI18N
+        jLabel1.setText("Usuario:");
+
+        txtArea.setBackground(new java.awt.Color(33, 27, 44));
+        txtArea.setColumns(20);
+        txtArea.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtArea.setForeground(new java.awt.Color(255, 255, 255));
+        txtArea.setRows(5);
+        txtArea.setText("Elija un usuario y toque un botón para aplicarle un método");
+        jScrollPane1.setViewportView(txtArea);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(btnCascoPuesto)
-                                        .addComponent(btnEditarNombre, javax.swing.GroupLayout.Alignment.LEADING))
-                                    .addComponent(btnEditarEdad)
-                                    .addComponent(btnViaje)
-                                    .addComponent(btnMostrarDatos)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(14, 14, 14)
-                                        .addComponent(jLabel2))
-                                    .addComponent(btnEstadoCasco))
-                                .addGap(85, 85, 85)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(btnNecesitaInflado)
-                                    .addComponent(btnRevisarBici)
-                                    .addComponent(btnInflar)
-                                    .addComponent(btnCambiarCambios)
-                                    .addComponent(btnCambiosActuales)))))
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(217, 217, 217)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(comboUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(121, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(147, 147, 147)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(6, 6, 6))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(comboUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(27, Short.MAX_VALUE))))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(14, 14, 14)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(comboUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnInflar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnRevisarBici)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCambiarCambios)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCambiosActuales)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnNecesitaInflado))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnEstadoCasco)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCascoPuesto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnEditarNombre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnEditarEdad)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnViaje)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnMostrarDatos)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+        );
+
+        jPanel7.setBackground(new java.awt.Color(61, 50, 69));
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        jLabel4.setBackground(new java.awt.Color(61, 50, 69));
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("ventana de actualización de datos");
+        jLabel4.setToolTipText("");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(15, 15, 15))
+        );
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void comboUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboUsuariosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboUsuariosActionPerformed
 
     private void btnViajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViajeActionPerformed
         Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
@@ -327,34 +468,76 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
         double tiempoHoras;
         String kmStr;
         String tiempoHorasStr;
-        
+
         if(UsuarioSelec.isCascoPuesto()){
-           kmStr = JOptionPane.showInputDialog("Ingrese los km recorridos: ");
-           km = Integer.parseInt(kmStr);
-           tiempoHorasStr = JOptionPane.showInputDialog("Ingrese las horas andadas: ");
-           tiempoHoras = Integer.parseInt(tiempoHorasStr);
-           
-           UsuarioSelec.hacerViaje(km, tiempoHoras);
+            kmStr = JOptionPane.showInputDialog("Ingrese los km recorridos: ");
+            km = Integer.parseInt(kmStr);
+            tiempoHorasStr = JOptionPane.showInputDialog("Ingrese las horas andadas: ");
+            tiempoHoras = Integer.parseInt(tiempoHorasStr);
+
+            UsuarioSelec.hacerViaje(km, tiempoHoras);
         }
         else{
             JOptionPane.showMessageDialog(this, "No se pudo realizar el viaje, el casco no está puesto");
         }
     }//GEN-LAST:event_btnViajeActionPerformed
 
-    private void btnEstadoCascoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadoCascoActionPerformed
-        
+    private void comboUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboUsuariosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboUsuariosActionPerformed
+
+    private void btnCambiosActualesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiosActualesActionPerformed
         Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
-        
-        if (UsuarioSelec.isCascoPuesto()){
-        txtArea.setText("Se quitó el casco");
-        UsuarioSelec.sacarCasco();
+        Bicicleta bici = UsuarioSelec.getBici();
+
+        txtArea.setText("La bici esta en el cambio "+bici.getCambiosActuales());
+    }//GEN-LAST:event_btnCambiosActualesActionPerformed
+
+    private void btnInflarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInflarActionPerformed
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+        Bicicleta bici = UsuarioSelec.getBici();
+        double cantidad;
+        String cantidadStr;
+
+        cantidadStr = JOptionPane.showInputDialog("Cuanto desea inflar las ruedas?: ");
+        cantidad = Double.parseDouble(cantidadStr);
+
+        if(cantidad <= 70  && cantidad >= 0){
+            bici.setPresionNeumaticos(cantidad);
         }
         else{
-        txtArea.setText("Se puso el casco");
-        UsuarioSelec.ponerCasco();
+            JOptionPane.showMessageDialog(this, "El numero ingresado escapa de los parametros establecidos");
         }
 
-    }//GEN-LAST:event_btnEstadoCascoActionPerformed
+        txtArea.setText("La presion actual de los neumaticos es "+bici.getPresionNeumaticos());
+    }//GEN-LAST:event_btnInflarActionPerformed
+
+    private void btnNecesitaInfladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNecesitaInfladoActionPerformed
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+        Bicicleta bici = UsuarioSelec.getBici();
+
+        if(bici.necesitaInflado()){
+            txtArea.setText("La bici necesita inflado");
+        }
+        else{
+            txtArea.setText("La bici no necesita inflado");
+        }
+    }//GEN-LAST:event_btnNecesitaInfladoActionPerformed
+
+    private void btnEditarEdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEdadActionPerformed
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+        String edadStr = JOptionPane.showInputDialog("Ingrese la nueva edad: ");
+        int edad = Integer.parseInt(edadStr);
+        UsuarioSelec.setEdad(edad);
+        txtArea.setText("La edad es ahora: "+edad);
+    }//GEN-LAST:event_btnEditarEdadActionPerformed
+
+    private void btnEditarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarNombreActionPerformed
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+        String nombre = JOptionPane.showInputDialog("Ingrese el nuevo nombre: ");
+        UsuarioSelec.setNombre(nombre);
+        txtArea.setText("El nombre es ahora: "+nombre);
+    }//GEN-LAST:event_btnEditarNombreActionPerformed
 
     private void btnCascoPuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCascoPuestoActionPerformed
         Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
@@ -366,9 +549,28 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnCascoPuestoActionPerformed
 
+    private void btnMostrarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarDatosActionPerformed
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+        txtArea.setText(UsuarioSelec.toString());
+    }//GEN-LAST:event_btnMostrarDatosActionPerformed
+
+    private void btnEstadoCascoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadoCascoActionPerformed
+
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+
+        if (UsuarioSelec.isCascoPuesto()){
+            txtArea.setText("Se quitó el casco");
+            UsuarioSelec.sacarCasco();
+        }
+        else{
+            txtArea.setText("Se puso el casco");
+            UsuarioSelec.ponerCasco();
+        }
+    }//GEN-LAST:event_btnEstadoCascoActionPerformed
+
     private void btnRevisarBiciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRevisarBiciActionPerformed
         Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
-        
+
         if(UsuarioSelec.revisarBicicleta().equals("")){
             txtArea.setText("La bici no necesita nada");
         }
@@ -377,33 +579,15 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnRevisarBiciActionPerformed
 
-    private void btnMostrarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarDatosActionPerformed
-        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
-        txtArea.setText(UsuarioSelec.toString());
-    }//GEN-LAST:event_btnMostrarDatosActionPerformed
-
-    private void btnEditarEdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEdadActionPerformed
-        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
-        String edadStr = JOptionPane.showInputDialog("Ingrese la nueva edad: ");
-        int edad = Integer.parseInt(edadStr);
-        UsuarioSelec.setEdad(edad);
-        txtArea.setText("La edad es ahora: "+edad);
-    }//GEN-LAST:event_btnEditarEdadActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.dispose();
-        new ventanaPrincipal().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void btnCambiarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarCambiosActionPerformed
-         Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
+        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
         Bicicleta bici = UsuarioSelec.getBici();
         int cambio;
         String cambioStr;
-        
+
         cambioStr = JOptionPane.showInputDialog("A que cambio desea cambiar?: ");
         cambio = Integer.parseInt(cambioStr);
-        
+
         if(cambio <= 7 && cambio >= 1){
             txtArea.setText("Ahora se esta en el cambio numero "+cambio);
         }
@@ -411,53 +595,6 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "El numero ingresado escapa de los parametros establecidos");
         }
     }//GEN-LAST:event_btnCambiarCambiosActionPerformed
-
-    private void btnCambiosActualesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiosActualesActionPerformed
-        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
-        Bicicleta bici = UsuarioSelec.getBici();
-        
-        txtArea.setText("La bici esta en el cambio "+bici.getCambiosActuales());
-    }//GEN-LAST:event_btnCambiosActualesActionPerformed
-
-    private void btnNecesitaInfladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNecesitaInfladoActionPerformed
-        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
-        Bicicleta bici = UsuarioSelec.getBici();
-        
-        if(bici.necesitaInflado()){
-            txtArea.setText("La bici necesita inflado");
-        }
-        else{
-            txtArea.setText("La bici no necesita inflado");
-        }
-    }//GEN-LAST:event_btnNecesitaInfladoActionPerformed
-
-    private void btnEditarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarNombreActionPerformed
-        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
-        String nombre = JOptionPane.showInputDialog("Ingrese el nuevo nombre: ");
-        UsuarioSelec.setNombre(nombre);
-        txtArea.setText("El nombre es ahora: "+nombre);
-        
-        
-    }//GEN-LAST:event_btnEditarNombreActionPerformed
-
-    private void btnInflarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInflarActionPerformed
-        Usuario UsuarioSelec =(Usuario) comboUsuarios.getSelectedItem();
-        Bicicleta bici = UsuarioSelec.getBici();
-        double cantidad;
-        String cantidadStr;
-        
-        cantidadStr = JOptionPane.showInputDialog("Cuanto desea inflar las ruedas?: ");
-        cantidad = Double.parseDouble(cantidadStr);
-        
-        if(cantidad <= 70  && cantidad >= 0){
-            bici.setPresionNeumaticos(cantidad);
-        }
-        else{
-            JOptionPane.showMessageDialog(this, "El numero ingresado escapa de los parametros establecidos");
-        }
-        
-        txtArea.setText("La presion actual de los neumaticos es "+bici.getPresionNeumaticos());
-    }//GEN-LAST:event_btnInflarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -505,12 +642,21 @@ public class VentanaActualizarUsuario extends javax.swing.JFrame {
     private javax.swing.JButton btnRevisarBici;
     private javax.swing.JButton btnViaje;
     private javax.swing.JComboBox<Usuario> comboUsuarios;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea txtArea;
     // End of variables declaration//GEN-END:variables
