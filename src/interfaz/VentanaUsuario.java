@@ -248,7 +248,7 @@ public class VentanaUsuario extends javax.swing.JFrame {
         new ventanaPrincipal().setVisible(true);
     }//GEN-LAST:event_btnVolverActionPerformed
 
-}
+
 
 /**
      * @param args the command line arguments
@@ -301,8 +301,4 @@ public class VentanaUsuario extends javax.swing.JFrame {
     private javax.swing.JButton usuarioCrearUsuario;
     // End of variables declaration//GEN-END:variables
 
-    static class usuarios {
-
-       
-    }
 }
