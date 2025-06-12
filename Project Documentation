@@ -1,0 +1,157 @@
+
+
+
+
+
+
+BicicleteANDO Project Documentation
+
+
+
+1. Introducción
+
+BicicleteANDO es una aplicación de escritorio Java Swing que permite a usuarios registrar bicicletas, asignarles usuarios y gestionar viajes y mantenimiento de las bicicletas. El proyecto está organizado en dos paquetes principales:
+
+logica: contiene la lógica del negocio (modelos y gestión de datos).
+interfaz: contiene las ventanas (JFrames) que conforman la GUI.
+
+
+
+2. Paquete logica
+
+2.1 Clase Bicicleta
+
+Propósito: Representa una bicicleta con atributos como modelo, modo (urbano, montaña, eléctrica), distancia recorrida, velocidad promedio, cambios actuales y presión de neumáticos.
+Atributos clave:
+
+  String modelo
+  String modo
+  double distanciaRecorrida
+  double velocidadPromedio
+  int cambiosActuales
+  double presionNeumaticos
+Métodos principales:
+
+  registrarViaje(double km, double tiempoHoras): registra un viaje, actualiza distancia, velocidad promedio y disminuye presión.
+  tocaPrimerService(): indica si necesita service según tipo de bicicleta y kilómetros.
+  necesitaInflado(): indica si la presión está por debajo de 20 PSI.
+  setCambiosActuales(int), setPresionNeumaticos(double): validan rangos aceptables.
+  toString(): formato legible con datos actuales.
+
+2.2 Clase Usuario
+
+Propósitos: Representa un usuario que utiliza una bicicleta.
+Atributos clave:
+
+  String nombre
+  int edad
+  Bicicleta bici
+  boolean cascoPuesto
+  Métodos principales:
+
+ ponerCasco(), sacarCasco(): marcan estado del casco.
+ hacerViaje(double km, double tiempoHoras): solo registra viaje si casco está puesto.
+ revisarBicicleta(): devuelve mensajes sobre inflado o service necesarios.
+ toString(): describe usuario (nombre, edad) o resumen detallado.
+
+ 2.3 Clase ArrayUsuarios
+
+Propósitos: Gestiona lista global de usuarios.
+Atributos: private static ArrayList<Usuario> usuarios
+Métodos:
+
+ getUsuarios(): devuelve lista.
+ setUsuarios(List<Usuario>): reemplaza lista.
+ agregarUsuario(Usuario u): añade un usuario.
+
+2.4 Clase ArrayBicicletas
+
+Propósitos: Gestiona lista global de bicicletas.
+Atributos: private static ArrayList<Bicicleta> bicicletas
+Métodos:
+
+getBicicleta(): devuelve lista.
+setBicicleta(List<Bicicleta>): reemplaza lista.
+agregarBicicleta(Bicicleta b): añade una bicicleta.
+
+
+
+3. Paquete interfaz
+
+3.1 VentanaPrincipal
+
+Descripción: Punto de entrada GUI, muestra menú principal con opciones para:
+
+Crear bicicleta.
+Crear usuario.
+Actualizar usuario.
+Control de usuario y bicicleta.
+Botones** abren respectivas ventanas.
+
+ 3.2 VentanaBicicleta
+
+Funcionalidad**: Permite al usuario ingresar modelo y modo para crear una bicicleta.
+Componentes**:
+
+JTextField txtModel
+JComboBox comboModo (urbano/montaña/eléctrica)
+Botón agregar Bicicleta que valida y añade a ArrayBicicletas.
+Botón volver al menú principal.
+
+ 3.3 VentanaUsuario
+
+Funcionalidad: Permite crear usuarios y asignarles una bicicleta existente.
+Componentes:
+
+ JTextField txtNombre, txtEdad
+ JComboBox comboBicicletas (cargado dinámicamente desde ArrayBicicletas)
+   JCheckBox checkCasco
+   Botón crear usuario que valida campos, crea Usuario y añade a ArrayUsuarios.
+   Botón volver al menú principal.
+
+ 3.4 VentanaActualizarUsuario
+
+Funcionalidad: Permite seleccionar un usuario y aplicar métodos sobre su bicicleta o casco.
+Componentes:
+
+  JComboBox<Usuario> comboUsuarios (cargado desde ArrayUsuarios)
+  JTextArea txtArea para mostrar resultados.
+  Botones:
+
+   Hacer Viaje (solicita km y horas y llama hacerViaje).
+   Poner/quitar casco, Se tiene el casco puesto?.
+   Mostrar datos (toString()).
+   Editar nombre, Editar edad.
+   Revisar bicicleta,Necesita inflado?, Cambiar cambios, Cambios actuales, Inflar ruedas.
+  * Botón `volver al menú principal.
+
+ 3.5 VentanaControlUsuario
+
+Funcionalidád: Panel centralizado con botones en GridLayout para operar sobre el usuario.
+Componentes:
+
+  JComboBox<Usuario> comboUsuarios, JTextArea textInfo.
+  Botones para registrar viaje, cambiar cambios, inflar neumáticos, actualizar info.
+  Organiza acciones en un marco limpio con BorderLayout.
+
+
+
+ 4. Flujo de uso
+
+1. El usuario inicia en VentanaPrincipal.
+2. Crea bicicletas en VentanaBicicleta, que se almacenan en ArrayBicicletas.
+3. Crea usuarios en VentanaUsuario, asignándoles bicicletas, almacenados en ArrayUsuarios.
+4. Desde VentanaActualizarUsuario o VentanaControlUsuario realiza acciones de viaje y mantenimiento.
+
+
+
+ 5. Puntos Clave
+
+Encapsulamiento: Clases ArrayUsuarios y ArrayBicicletas gestionan listas estáticas.
+Validación: Entrada de datos validada (edad, casco, existencia de bicicletas).
+Actualización dinámica: Los JComboBo se regrgan desde la lista actual.
+Separación clara: Lógica vs. presentación.
+
+
+
+Fin de la documentación 
